@@ -1,96 +1,182 @@
-/* Estilos generales para resetear padding y margin */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-    flex-direction: column;
+/* 1) Reset CSS ligero */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* 2) Tipografía y fondo de página */
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  background-color: #f4f6f8; /* fondo gris muy claro */
+  color: #333;
 }
-h1{
-    margin-bottom:40px;
-    font-family:  monospace;
-    font-size:34px;
 
+/* 3) Contenedor principal centrado */
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
-.status {
-    margin-top: 10px;
-    text-align: center;
-    display: block;
-    position: absolute;
-    width: 100%;
-    margin-bottom: 10px;
+
+/* 4) Título elegante */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #1f2937; /* un gris oscuro para contraste */
+  text-align: center;
 }
-/* Estilos para el contenedor principal */
+
+/* 5) Contenedor de carga de imagen */
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    margin-bottom: 20px; /* Asegura que ocupe toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 700px;
 }
 
-/* Estilos para el label que contiene el icono y el texto */
+/* 6) Tarjeta punteada para upload */
 .custom-file-upload {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 650px; /* Ajusta el tamaño del contenedor */
-    height: 500px; /* Altura considerable para ver el contorno */
-    border: 2px dashed gray;
-    background-color: #ffffff;
-    border-radius: 10px;
-}
-.selUpload{
-    display: flex;
-    max-width: 600px;
-    max-height: 400px;
-}
-/* Estilos para el icono o imagen */
-#upload-btn img {
-    margin-bottom: 10px;
-    width: 40px;  /* Ajusta el tamaño de la imagen según sea necesario */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 650px;
+  height: 430px;
+  border: 2px dashed #9ca3af; /* gris medio */
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.2s ease;
+  cursor: pointer;
 }
 
-/* Estilos para el botón de carga */
+.custom-file-upload:hover {
+  border-color: #3b82f6; /* azul al pasar ratón */
+}
+
+/* 7) Zona que contiene icono+texto */
+.selUpload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none; /* para que el label maneje click */
+}
+
 #upload-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-#upload-btn:hover {
-    color: #000;
+/* 8) Ícono de upload + texto */
+#upload-btn img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.75rem;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
 }
 
-/* Estilos para ocultar el input de archivo */
+#upload-btn:hover img {
+  opacity: 1;
+}
+
+.upload-text {
+  font-size: 1rem;
+  color: #6b7280; /* gris ligeramente oscuro */
+  font-weight: 500;
+}
+
+/* 9) Input file oculto */
 #upload {
-    display: none;
+  display: none;
 }
 
-/* Estilos para el botón de reset */
-#reset-image {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 14px;
-    
-    cursor: pointer;
-    border: 1px solid #88ccdb;
-    background-color: #85aedc;
-    border-radius: 5px;
+/* 10) Estilos para el área de status (borde y fondo) */
+#status-container {
+  background-color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1rem;
+  min-width: 200px;
+  text-align: center;
 }
 
-#reset-image:hover {
-    background-color: #f0f0f0;
+#status {
+  font-weight: 500;
+  color: #111827;
 }
 
-p, button {
-    margin-top: 20px;
+/* 11) Botón “Reset Image” */
+.btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #3b82f6; /* azul */
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.366);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
+
+.btn:hover {
+  background-color: #11295f; /* azul más intenso */
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  background-color: #1e40af; /* azul más oscuro */
+  transform: translateY(0);
+}
+
+/* 12) Estilos responsivos (para pantallas pequeñas) */
+@media (max-width: 768px) {
+  .custom-file-upload {
+    max-width: 90%;
+    height: 300px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #upload-btn img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .upload-text {
+    font-size: 0.9rem;
+  }
+}
+/* Estilos para la predicción y la confidence por separado */
+.prediction-text {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.confidence-text {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
