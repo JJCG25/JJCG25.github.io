@@ -1,0 +1,96 @@
+/* Estilos generales para resetear padding y margin */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    flex-direction: column;
+
+}
+h1{
+    margin-bottom:40px;
+    font-family:  monospace;
+    font-size:34px;
+
+}
+.status {
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin-bottom: 10px;
+}
+/* Estilos para el contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    margin-bottom: 20px; /* Asegura que ocupe toda la pantalla */
+}
+
+/* Estilos para el label que contiene el icono y el texto */
+.custom-file-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 650px; /* Ajusta el tamaño del contenedor */
+    height: 500px; /* Altura considerable para ver el contorno */
+    border: 2px dashed gray;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.selUpload{
+    display: flex;
+    max-width: 600px;
+    max-height: 400px;
+}
+/* Estilos para el icono o imagen */
+#upload-btn img {
+    margin-bottom: 10px;
+    width: 40px;  /* Ajusta el tamaño de la imagen según sea necesario */
+}
+
+/* Estilos para el botón de carga */
+#upload-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#upload-btn:hover {
+    color: #000;
+}
+
+/* Estilos para ocultar el input de archivo */
+#upload {
+    display: none;
+}
+
+/* Estilos para el botón de reset */
+#reset-image {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    
+    cursor: pointer;
+    border: 1px solid #88ccdb;
+    background-color: #85aedc;
+    border-radius: 5px;
+}
+
+#reset-image:hover {
+    background-color: #f0f0f0;
+}
+
+p, button {
+    margin-top: 20px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camera Classification</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Camera Classification</h1>
+
+  <div class="container">
+    <div class="custom-file-upload">
+      <div class="selUpload">
+        <label id="upload-btn" for="upload">
+          <img
+            id="placeholder-icon"
+            src="https://cdn.icon-icons.com/icons2/2348/PNG/512/image_picture_icon_143003.png"
+            alt="Upload Icon"
+          />
+          <span>Upload Image</span>
+        </label>
+      </div>
+      <input type="file" id="upload" accept="image/*" />
+    </div>
+  </div>
+
+  <label id="status">Ready</label>
+  <button id="reset-image">Reset image</button>
+
+  <!-- ONNX Runtime Web (ORT) -->
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+  <script src="./index.js" type="module"></script>
+</body>
+</html>
