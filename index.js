@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 3) Cargar el modelo ONNX float32 (no cuantizado)
   status.textContent = "Loading model…";
   const onnxURL =
-    "https://huggingface.co/JuanJCalderonG/efficient-net-quant/resolve/main/model_fp32.onnx";
+    "https://huggingface.co/JuanJCalderonG/efficient-net-quant/resolve/main/model_quantized(1).onnx";
   const preprocURL =
     "https://huggingface.co/JuanJCalderonG/efficient-net-quant/resolve/main/preprocessor_config.json";
 
